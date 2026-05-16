@@ -84,7 +84,7 @@ export default function App() {
   async function handleStart(plan) {
     if (plan) setStudyPlan(plan)
     try {
-      const res = await fetch('http://localhost:8000/session/start', {
+      const res = await fetch('https://emotisence.netlify.app/session/start', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ simulation, plan: plan || studyPlan }),
