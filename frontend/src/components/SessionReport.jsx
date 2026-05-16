@@ -9,13 +9,13 @@ export default function SessionReport({ stats, history }) {
   const [loading, setLoading] = useState(false)
 
   async function downloadCSV() {
-    window.open('https://emotisence.netlify.app/session/export/csv', '_blank')
+    window.open('https://emotisense-e6z2.onrender.com/session/export/csv', '_blank')
   }
 
   async function downloadPDF() {
     setLoading(true)
     try {
-      const res = await fetch('https://emotisence.netlify.app/session/export/pdf', { method: 'POST' })
+      const res = await fetch('https://emotisense-e6z2.onrender.com/session/export/pdf', { method: 'POST' })
       const blob = await res.blob()
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a'); a.href = url; a.download = 'emotisense_report.pdf'; a.click()
