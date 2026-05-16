@@ -214,7 +214,7 @@ export default function ScreenShare({ sessionActive, screenStream, setScreenStre
     fd.append('study_app', studyApp)  // Send the app user should be in
     
     try {
-      const res  = await fetch('https://emotisence.netlify.app/study/screen', { method: 'POST', body: fd })
+      const res  = await fetch('https://emotisense-e6z2.onrender.com/study/screen', { method: 'POST', body: fd })
       const data = await res.json()
       setFocusScore(data.focus_score)
       setLastAlert(data.alert || null)
