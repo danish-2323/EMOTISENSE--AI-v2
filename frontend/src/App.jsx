@@ -116,7 +116,7 @@ export default function App() {
 
   async function handleStop() {
     try {
-      const res  = await fetch('http://localhost:8000/session/stop', { method: 'POST' })
+      const res  = await fetch('https://emotisence.netlify.app/session/stop', { method: 'POST' })
       const json = await res.json()
       if (json.ok) {
         setSessionActive(false)
