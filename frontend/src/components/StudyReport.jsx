@@ -100,7 +100,7 @@ export default function StudyReport({ stats, history, plan }) {
   async function fetchReport() {
     setLoading(true)
     try {
-      const res  = await fetch('http://localhost:8000/study/coach/report', {
+      const res  = await fetch('https://emotisense-e6z2.onrender.com/study/coach/report', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({
