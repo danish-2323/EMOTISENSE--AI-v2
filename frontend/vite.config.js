@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/session': 'http://localhost:8000',
-      '/health':  'http://localhost:8000',
+      '/session': 'https://emotisense-e6z2.onrender.com',
+      '/health':  'https://emotisense-e6z2.onrender.com',
     }
   }
 })
