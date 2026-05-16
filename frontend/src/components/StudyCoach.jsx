@@ -25,7 +25,7 @@ export default function StudyCoach({ sessionActive, liveData, plan }) {
   async function fetchNudge() {
     setLoading(true)
     try {
-      const res  = await fetch(`http://localhost:8000/study/coach/nudge?subject=${encodeURIComponent(plan?.subject || '')}&state=${encodeURIComponent(liveData?.study_state || 'Distracted')}`)
+      const res  = await fetch(`https://emotisence.netlify.app/study/coach/nudge?subject=${encodeURIComponent(plan?.subject || '')}&state=${encodeURIComponent(liveData?.study_state || 'Distracted')}`)
       const data = await res.json()
       push('coach', data.message)
     } catch {
